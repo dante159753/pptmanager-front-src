@@ -37,6 +37,7 @@
         methods: {
             logout() {
                 util.logout();
+                this.$router.push('/');
                 location.reload();
             }
         }

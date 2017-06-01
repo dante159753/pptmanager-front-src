@@ -49,9 +49,10 @@ export default {
           console.log(response.body);
           if (response.body['code'] == '200') {
 
-            var token = response.body['data'];
+            var token = response.body['data']['token'];
             console.log(token);
             util.set_userinfo({
+              id: response.body['data']['userinfo']['id'],
               username: this.form.username,
               logtype: this.form.logtype,
               token: token
